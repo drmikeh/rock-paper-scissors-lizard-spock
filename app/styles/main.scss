@@ -1,0 +1,185 @@
+$sidebar-width: 200px;
+$winColor: #15a015;
+$tieColor: #1515ff;
+$lossColor: #ff1515;
+$mainBackgroundColor: #eceeef;
+
+html {
+  min-height: 100%;
+  * {
+    outline: 0;
+  }
+}
+
+html, body, .body {
+  height: 100%;
+  background-color: $mainBackgroundColor;
+}
+
+img {
+  margin-top: 30px;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  // align-items: flex-start;
+  align-content: flex-start;
+  flex-grow: 1;
+}
+
+main {
+  text-align: center;
+  h1 {
+    color: Blue;
+    margin: 0.2em 0;
+    font-size: 3vw;
+  }
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),
+              0 1px 3px rgba(0,0,0,.08);
+  border-radius: 6px;
+  padding: 20px 20px 0 20px;
+
+  .result {
+    text-align: center;
+    padding: 3vh;
+    font-size: 3vw;
+    height: 40px;
+    color: #fff;
+    .animated {
+      &.win { color: $winColor; }
+      &.loss { color: $lossColor; }
+      &.tie { color: $tieColor; }
+      -webkit-animation-duration: 1.5s;
+              animation-duration: 1.5s;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  button {
+    background: 0;
+    border: 0;
+    height: 120px;
+    .fa {
+      font-size: 6vw;
+      display: block;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    &.win  { color: $winColor; }
+    &.loss { color: $lossColor; }
+    &.tie  { color: $tieColor; }
+  }
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  box-shadow: transparentize( #000, 0.8) 0 2px 4px;
+  background-color: darken($mainBackgroundColor, 3%);
+  width: $sidebar-width;
+  .legend {
+    background-color: white;
+    height: 50px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    // box-shadow: rgba(0,0,0,0.15) 0 1px 10px 0;
+    .me, .comparator, .cpu {
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      float: left;
+      text-align: center;
+      padding: 0.3rem 0;
+    }
+    .me, .cpu {
+      width: 40%;
+    }
+    .comparator {
+      width: 15%;
+    }
+  }
+  .history {
+    flex-grow: 1;
+    overflow: auto;
+  }
+  .history-item {
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    &.win  { background-color: rgba(0,150,0,0.1); }
+    &.loss { background-color: rgba(150,0,0,0.1); }
+    &.tie  { background-color: rgba(0,0,150,0.1); }
+    .fa {
+      text-align: center;
+      width: 40%;
+    }
+  }
+  .scoreboard {
+    width: $sidebar-width;
+    background-color: #fff;
+    height: 50px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    box-shadow: rgba(0,0,0,0.15) 0 -1px 10px 0;
+    .win, .loss, .tie, .move {
+      height: 40px;
+      line-height: 20px;
+      font-size: 11px;
+      width: 25%;
+      float: left;
+      text-align: center;
+      padding: 0.3rem 0;
+    }
+  }
+}
+
+.small {
+  font-size: 0.8em;
+  margin: 0 10px;
+}
+
+@media (max-width: 800px) {
+  .buttons {
+    button {
+      .fa {
+        font-size: 5vw;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  aside {
+    order: 2;
+  }
+  .buttons {
+    order: 1;
+    button {
+      .fa {
+        font-size: 5vw;
+        padding: 5px;
+      }
+    }
+  }
+}
