@@ -4,6 +4,8 @@ First of all I stole a lot of this from Austin Paquette's [codepen](http://codep
 
 You can go [here](https://drmikeh.github.io/rock-paper-scissors-lizard-spock/) to play the game.
 
+For an explanation of the game see [here](https://youtu.be/Kov2G0GouBw?t=25) and [here](https://youtu.be/x5Q6-wMx-K8).
+
 ## Screen Shot
 
 ![Screen Shot](images/screen-shot.png)
