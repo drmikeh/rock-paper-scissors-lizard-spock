@@ -12,17 +12,18 @@ You can go [here](https://drmikeh.github.io/rock-paper-scissors-lizard-spock/) t
 
 ### Runtime Dependencies
 
-* HTML5
-* CSS3 and Flexbox
-* JavaScript (ES-2015)
-* jQuery
-* Font-Awesome
-* animate.css
+* [HTML5](https://www.w3schools.com/html/html5_intro.asp)
+* [CSS3](https://www.w3schools.com/css/css3_intro.asp)
+* [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+* [JavaScript (ES-2015)](https://www.w3schools.com/js/)
+* [jQuery](https://jquery.com/)
+* [Font Awesome](http://fontawesome.io/)
+* [animate.css](https://daneden.github.io/animate.css/)
 
 ### Buildtime Dependencies / Tools
-* The Yeoman WebApp Generator (for scaffolding)
-* gulp
-* node-sass
-* eslint
-* babel
 
+* The [Yeoman](http://yeoman.io/) [WebApp Generator](https://github.com/yeoman/generator-webapp) (for scaffolding)
+* [gulp](http://gulpjs.com/)
+* [node-sass](https://github.com/sass/node-sass)
+* [eslint](http://eslint.org/)
+* [babel](https://babeljs.io/)
